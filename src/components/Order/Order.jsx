@@ -45,13 +45,13 @@ const Order = () => {
     return (
         <div className='flex w-10/12 mx-auto'>
             <div className='w-9/12 grid grid-cols-3 gap-5'>
-                {cards.map(card => <Card handaleKhamo={handaleKhamo} key={card.idMeal} card={card}></Card>)}
+                {cards.slice(0,12).map(card => <Card handaleKhamo={handaleKhamo} key={card.idMeal} card={card}></Card>)}
             </div>
             <div className='w-3/12 bg-amber-300 p-8'>
                 <h2 className='text-3xl'>Sidebar side</h2>
 
                 {sideCards.map((side, index) => <SiteCard side={side} index={index} key={side.idMeal}></SiteCard>)}
-
+                <button className='bg-slate-400 text-red-500'>AllClear</button>
             </div>
 
         </div>
